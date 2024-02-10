@@ -11,7 +11,7 @@ def homepage():
 def get_weatherdata():
     url =  'https://api.openweathermap.org/data/2.5/weather'
     params = {
-          'q':'nairobi',
+          'q':request.form.get('city'),
            'appid':request.form.get('appid'),
            'units': request.form.get('units')
     }
